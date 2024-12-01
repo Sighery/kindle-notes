@@ -10,3 +10,8 @@ Probably can trigger my own right/left tap events from there
 
 ![Kindle Tap Left Event](./kindle_tap_left.png)
 ![Kindle Tap Right Event](./kindle_tap_right.png)
+
+
+Kernel events documentation?
+
+https://docs.kernel.org/input/event-codes.html
