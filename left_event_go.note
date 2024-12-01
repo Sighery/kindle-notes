@@ -1,40 +1,33 @@
-73301850-01-01 19:49:49.003735555 +0000 UTC
-type: 0
-code: 0
-value: 0
-73301850-01-01 20:07:42.745297411 +0000 UTC
-type: 0
-code: 0
-value: 0
-73301850-01-01 20:54:40.243909123 +0000 UTC
-type: 0
-code: 0
-value: 0
-73301850-01-01 19:56:15.550857731 +0000 UTC
-type: 0
-code: 0
-value: 0
-73301850-01-01 19:49:49 +0000 UTC
-type: 0
-code: 0
-value: 0
-78312993-01-21 08:44:59.948941827 +0000 UTC
-type: 0
-code: 0
-value: 0
-78312993-01-21 07:44:17.816936963 +0000 UTC
-type: 0
-code: 0
-value: 0
-78312993-01-21 07:40:13 +0000 UTC
-type: 0
-code: 0
-value: 0
-80000114-08-20 15:33:44.708768259 +0000 UTC
-type: 0
-code: 0
-value: 0
-80000114-08-20 15:33:49 +0000 UTC
-type: 0
-code: 0
-value: 0
+event
+type: 0x03 [EV_ABS], code: 0x39 [ABS_MT_TRACKING_ID], value: 0
+type: 0x03 [EV_ABS], code: 0x39 [ABS_MT_TRACKING_ID], value: 0
+event
+type: 0x03 [EV_ABS], code: 0x35 [ABS_MT_POSITION_X], value: 153
+type: 0x03 [EV_ABS], code: 0x35 [ABS_MT_POSITION_X], value: 153
+event
+type: 0x03 [EV_ABS], code: 0x36 [ABS_MT_POSITION_Y], value: 825
+type: 0x03 [EV_ABS], code: 0x36 [ABS_MT_POSITION_Y], value: 825
+event
+type: 0x03 [EV_ABS], code: 0x3a [ABS_MT_PRESSURE], value: 100
+type: 0x03 [EV_ABS], code: 0x3a [ABS_MT_PRESSURE], value: 100
+event
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
+event
+type: 0x03 [EV_ABS], code: 0x36 [ABS_MT_POSITION_Y], value: 829
+type: 0x03 [EV_ABS], code: 0x36 [ABS_MT_POSITION_Y], value: 829
+event
+type: 0x03 [EV_ABS], code: 0x3a [ABS_MT_PRESSURE], value: 75
+type: 0x03 [EV_ABS], code: 0x3a [ABS_MT_PRESSURE], value: 75
+event
+type: 0x03 [EV_ABS], code: 0x30 [ABS_MT_TOUCH_MAJOR], value: 126
+type: 0x03 [EV_ABS], code: 0x30 [ABS_MT_TOUCH_MAJOR], value: 126
+event
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
+event
+type: 0x03 [EV_ABS], code: 0x39 [ABS_MT_TRACKING_ID], value: -1
+type: 0x03 [EV_ABS], code: 0x39 [ABS_MT_TRACKING_ID], value: -1
+event
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
+type: 0x00 [EV_SYN], code: 0x00 [SYN_REPORT], value: 0
