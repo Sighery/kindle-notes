@@ -1,0 +1,134 @@
+>: help
+Usage: ace_bt_cli <module> <command> [args]
+
+List of commands:
+<command>          Description
+---------          -----------
+    help               Display this help
+    init               Initialize bluetooth
+    deinit             Deinitialize bluetooth
+    enable             enables bluetooth
+    disable            disables bluetooth
+    radiostate         Retrieves the Adapter state
+    getadaptername     gets adapter name of bluetooth device
+    setadaptername     sets adapter name of bluetooth device
+    getadapterprop     gets adapter properties of bluetooth device
+    getsession         gets bluetooth session handle
+    getsessionmw       gets bluetooth session handle from the MW
+    enableHCI          enables btsnoop logs
+    disableHCI         disables btsnoop logs
+    pair               Initiates device pairing
+    unpair             Initiates device unpairing
+    paircancel         Cancels an ongoing device pairing
+    pin                Enter pairing pin
+    passkey            Enter pairing passkey
+    bondedlist         gets list of bonded devices
+    connectedlist      gets list of connected devices
+    bondedcount        gets number of bonded devices
+    connectedcount     gets number of connected devices
+    bondstate          gets bond state of given device
+    connstate          gets connection state of given device
+    readrssi           Reads RSSI of remote device
+    getremotename      gets name of remote bluetooth device
+    getdevicetype      gets device type of remote bluetooth device
+
+    classic            Classic interface
+        connect                 Initiates profile connect calls
+        disconnect              Initiates profile disconnect calls
+        scan                    Initiates device scan
+        stopscan                Stops device scan
+        discoverable            Set the discoverability state (y or n)
+        getdeviceprop           Get classic device property of bonded device
+        getdiscoverable         Get the discoverability state
+        getuuids                Retrieves the UUID list
+        getuuidscount           Retrieves UUID count
+        geteir                  Retrieves Eir
+        getaclprio              Get ACL priority state of connected A2DP sink device
+        regavrcptg              Register for AVRCP Target callbacks
+        sendmetadata            test send metadata
+        sendavrcpntf            test send notification
+        sendplaysts             test send play status
+        getsourceprofilestate   gets profile state of source device
+        getsourceaudiostate     gets audio state of source device
+        registerhid             Register for HID callbacks
+        getreport               Get HID report
+        setreport               Set HID report
+        getprotocol             Get protocol for HID device
+        setprotocol             Set protocol for HID device
+        senddata                Send data to HID device
+        virtualunplug           Virtual Unplug HID device
+        hidprofilestate         Get HID profile state
+        batterylevel            get HID battery level
+        restrict                Set Restricted Profiles for Remote Device <bdaddr> <0(None):1(A2DP Source):2(A2DP Sink):3(HID)>
+
+    ble                BLE interface
+        startbeacon             Start beaconing
+        stopbeacon              Stop beaconing
+        registerbeacon          Register Beacon Client
+        deregisterbeacon        Deregister Beacon Client
+        createservice           Create Gatt Service
+        addservice              Add Gatt Service
+        addinclservice          Add Included Service to Gatt Server
+        addchar                 Add Characteristics to Gatt Server
+        addchardesp             Add Characteristics with Descriptor to Gatt Server
+        registerserver          Register Gatt Server
+        freeService             Free service
+        deregisterserver        Deregister Gatt Server
+        sendResponse            sendResponse
+        sendNotify              sendNotification
+        getMtu                  mtu get request
+        connPrioReq             connection priority change request
+        readCb                  check read request cb received
+        connCb                  check connection cb received
+        mesh                    send mesh adv
+        startbeaconscanparams   Start beacon scan (input filters and settings)
+        startdefbeaconscan      Start beacon scan (no filters default settings)
+        stopbeaconscan          Stop beacon scan
+        getadvhandle            Gets Adv Instance Handle
+        getgatthandle           Gets Gatt Instance Handle
+        getconnhandle           Gets Conn Handle
+        configureMtu            mtu change request
+        rssi                    Get RSSI of connected BLE device
+        regble                  register ble client
+        deregble                deregister ble client
+        connGattc               connection request
+        setclientmtu            mtu change request
+        discGattc               disconnection request
+        regGattc                register gatt client
+        deregGattc              deregister gatt client
+        discAllGattSvc          discover all gatt services
+        discGattSvc             discover gatt service by uuid
+        getdb                   get gatt service database
+            Need 1 param: conn_handle
+        getsvc                  get gatt service
+        regNotify               Register for notification
+        regIndication           Register for indication
+        readChars               Read Chars
+            Need 1 param: <uuid> [conn_handle]
+        readDesc                Read Descriptor
+        writeDesc               Write Descriptor
+        writeChars              Write Characteristics
+            Need 3 params: response uuid value <conn_handle>
+        brw                     begin Reliable Write
+        erw                     execute Reliable Write
+        arw                     abort Reliable Write
+        att                     command for PTS
+        gatt_refresh            command for PTS
+        connect                 create LE connection
+            Need at least 4 params: <bdaddr> <conn_param> <conn_priority> <auto_connect> [session_handle]
+        setconnparam            set connection parameters
+        setconnprio             set connection priority
+        registergattc           register gatt client with application ID
+        cancelConnect           cancel LE connection
+
+    exit               : exit ace_bt_cli
+
+List of options:
+    conn_handle     str. Connection handle. Get it from ble connect
+    <bdaddr>        str. Full MAC address, e.g. 2C:CF:67:B8:DC:3F
+    <conn_param>    int. Matches aceBt_bleConnParam_t enum. Use 2
+    <conn_priority> int. Matches aceBT_bleConnPriority_t enum. Use 10
+    <auto_connect>  int (bool). Use 1
+    response        int. Matches aceBT_responseType_t enum. Use 1
+    uuid            str. Gatt characteristic ID, e.g. ff120000000000000000000000000000
+    value           str. ASCII in HEX to write, e.g. ON is 4f4e
