@@ -101,5 +101,44 @@ ACEBTCLI connHandle 0xb5f067b0 gatt format 255
 ACEBTCLI Write Characteristic Success
 ```
 
+### Notification
+
+You can subscribe to a given characteristic with NOTIFY support. When you
+subscribe, you'll get constant messages in stdout. You can still type to disable
+it back, you'll just lose your inputted characters in a sea of text
+
+#### Enable subscription
+
+```
+>: ble regNotify ff120000000000000000000000000000 1
+ACEBTCLI CLI callback : aceBtCli_bleGattcWriteDescCallback()
+ACEBTCLI connHandle 0xb5f067b0 status 0
+ACEBTCLI Register Notification Success
+
+ACEBTCLI CLI callback : aceBtCli_bleGattcNotifyCharsCallback()
+ACEBTCLI connHandle 0xb5f067b0
+ACEBTCLI UUID:: ff 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ACEBTCLI 4f
+ACEBTCLI 46
+ACEBTCLI 46
+ACEBTCLI CLI callback : aceBtCli_bleGattcNotifyCharsCallback()
+ACEBTCLI connHandle 0xb5f067b0
+ACEBTCLI UUID:: ff 12 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ACEBTCLI 4f
+ACEBTCLI 46
+ACEBTCLI 46
+```
+
+#### Disable subscription
+
+```
+>: ble regNotify ff120000000000000000000000000000 0
+ACEBTCLI CLI callback : aceBtCli_bleGattcWriteDescCallback()
+ACEBTCLI connHandle 0xb5f067b0 status 0
+ACEBTCLI Register Notification Success
+```
+
+
+
 
 [ascii table]: https://condor.depaul.edu/sjost/it236/documents/ascii.htm

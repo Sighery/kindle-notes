@@ -102,6 +102,7 @@ List of commands:
             Need 1 param: conn_handle
         getsvc                  get gatt service
         regNotify               Register for notification
+            ACEBTCLI Need 2 param: <uuid> <enable> [conn_handle]
         regIndication           Register for indication
         readChars               Read Chars
             Need 1 param: <uuid> [conn_handle]
@@ -132,3 +133,4 @@ List of options:
     response        int. Matches aceBT_responseType_t enum. Use 1
     uuid            str. Gatt characteristic ID, e.g. ff120000000000000000000000000000
     value           str. ASCII in HEX to write, e.g. ON is 4f4e
+    enable          int. (regNotify). Enable or disable the notification
